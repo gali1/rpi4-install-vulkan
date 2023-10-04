@@ -86,7 +86,7 @@ fi
 cd "$src"
 git fetch && git reset --hard origin/main
 # configure
-meson --prefix "$install" --libdir lib -Dplatforms=x11 -Dvulkan-drivers=broadcom -Ddri-drivers= -Dgallium-drivers= -Dbuildtype=$config "$build" || exit 1
+meson --prefix "$install" --libdir lib -Dplatforms=x11 -Dvulkan-drivers=broadcom -Ddri-drivers-path= -Dgallium-drivers= -Dbuildtype=$config "$build" || exit 1
 
 # build
 echo -e "\nBuilding driver..."
